@@ -1,0 +1,66 @@
+<!-- enctype="multipart/form-data" -->
+<form class="row needs-validation" action="/book/1" method="post" novalidate  enctype="multipart/form-data">
+  <div class="modal-content">
+    <div class="search-header text-center">
+      <h2 class="text-center">Update Book</h2>
+    </div>
+    <div class="modal-body">
+      <div class="col-12">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control input-lg" id="title" name="title" required value="Let's pretend I'm OK">
+        <div class="invalid-feedback">
+          Please provide book name.
+        </div>
+      </div>
+      <div class="col-12 mt-2">
+        <label for="author" class="form-label">Author</label>
+        <select name="author" type="select" class="form-select" required>
+          <option selected label="Select Author" value=""></option>
+          <option selected label="Premchand" value="1"></option>
+          <option label="John Smith" value="2"></option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a author name.
+        </div>
+      </div>
+
+      <div class="col-12 mt-2">
+        <label for="publishDate" class="form-label">Publish date</label>
+        <input type="date" class="form-select" id="publishDate" name="publishDate" required value="2025-01-19">
+        <div class="invalid-feedback">
+          Please provide a publish date.
+        </div>
+      </div>
+
+      <div class="col-12 mt-2">
+        <label for="pageCount" class="form-label">Page Count</label>
+        <input type="number" class="form-control" id="pageCount" name="pageCount"  value="250" required>
+        <div class="invalid-feedback">
+          Please provide page count.
+        </div>
+      </div>
+
+      <div class="col-12 mt-2">
+        <label for="cover" class="form-label">Cover</label>
+        <input id="custom-file-upload" class="form-control" type="file" id="cover" name="cover" required >
+        <div class="invalid-feedback">
+          Please upload book cover.
+        </div>
+      </div>
+
+      <div class="col-12 mt-2">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="This is a book covered imotions" required>
+        <div class="invalid-feedback">
+          Please provide description.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <a href="/book/1"><button type="button" class="btn btn-secondary m-3" data-dismiss="modal"><i class="bi bi-x-circle"></i> Close</button></a>
+      <button type="submit" class="btn btn-primary"><i class="bi bi-save2"></i> Update</button>
+    </div>
+  </div>
+</form>
